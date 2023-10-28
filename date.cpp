@@ -83,57 +83,10 @@ else
     cout<<"invalid date";
 }
 }
-/*void date::cal()
-{
-if(d==30&&(m==4||m==6||m==9||m==11)&&x==0)
-{
-    nd=1;
-    nm=m+1;
-    ny=y;
-}
-else if(d==31&&(m==1||m==10||m==3||m==7||m==8||m==5)&&x==0)
-{
-    nd=1;
-    nm=m+1;
-    ny=y;
-}
-else if((d==28||d==29)&&m==2&&x==0)
-{
-     nd=1;
-    nm=m+1;
-    ny=y;
-}
-else if(d==31&&m==12&&x==0)
-{
-nd=1;
-nm=1;
-ny=y+1;
-}
-else if(x==0)
-{
-    nd=d+1;
-    nm=m;
-    ny=y;
-}
-else
-{
-nd=0;
-nm=0;
-ny=0;
-}
-}
-void date::nshow()
-{
-    cout<<"\nnext date:"<<nd<<"/"<<nm<<"/"<<ny;
-}
-*/
 int main()
 {
 date dat;
 dat.assign();
 dat.show();
-/*dat.cal();
-dat.nshow();
-*/
 return main();
 }
