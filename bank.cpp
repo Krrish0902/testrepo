@@ -38,10 +38,7 @@ void bank::deposit()
     bal=bal+amt;
     cout<<bal;
 }
-void bank::beq()
-{
-    cout<<bal;
-}
+
 int main()
 {
 
