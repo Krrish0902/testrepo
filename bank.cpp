@@ -23,7 +23,7 @@ void bank::withdrawal()
     cin>>amt;
     if(amt>bal)
     {
-        cout<<"insuufficient balance";
+        cout<<"insufficient balance";
     }
     else
     {
@@ -47,8 +47,6 @@ int main()
 
     int an,R,o,R1;
     bank cus[100];
-    label1:
-        {
     cout<<"enter your account number[0-99]";
     cin>>an;
     cus[an].put();
@@ -66,19 +64,11 @@ int main()
         cout<<"\naccount number:"<<an;
         }
         }
-        }
     cout<<"\ndo you wanna continue\n1.yess\n2.noo";
     cin>>R;
     if(R==1)
     {
-        cout<<"do you want to continue in same account or another\n1.same\n2.another";
-        cin>>R1;
-        if(R1==2)
-        {
-            goto label1;
-        }
-        else
-            goto label2;
+        goto label2;
     }
     else
     {
