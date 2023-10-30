@@ -18,14 +18,14 @@ void triangle::assign()
 }
 void triangle::valid()
 {
-    if((x>y+z)||(y>x+z)||(z>x+y))
+    if((x>=y+z)&&(y>=x+z)&&(z>=x+y))
     {
-        cout<<"triangle is valid";
-        a++;
+        cout<<"triangle is invalid";
     }
     else
     {
-        cout<<"triangle is not valid";
+        cout<<"triangle is valid";
+        a++;
     }
 }
 void triangle::sides()
@@ -50,4 +50,5 @@ int main()
     tri.valid();
     tri.sides();
     tri.area();
+    return 0;
 }

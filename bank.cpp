@@ -8,6 +8,10 @@ class bank
            void withdrawal();
            void put();
 };
+void bank::beq()
+{
+    cout<<bal;
+}
 void bank::put()
 {
     cout<<"enter the type account type\n1.savings\n2.current";
