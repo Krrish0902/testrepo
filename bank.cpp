@@ -2,7 +2,7 @@
 using namespace std;
 class bank
 {
-    private:int amt,bal,t;
+    private:int amt,mbal,bal,t;
     public:void beq();
            void deposit();
            void withdrawal();
@@ -10,29 +10,29 @@ class bank
 };
 void bank::beq()
 {
-    cout<<bal;
+    cout<<bal+mbal;
 }
 void bank::put()
 {
     cout<<"enter the type account type\n1.savings\n2.current";
     cin>>t;
     if(t==1)
-        bal=1000;
+        mbal=1000;
     else
-        bal=5000;
+        mbal=5000;
 }
 void bank::withdrawal()
 {
     cout<<"enter the amout to be withdrawn";
     cin>>amt;
-    if(amt>bal)
+    if(amt>(bal-mbal))
     {
         cout<<"insufficient balance";
     }
     else
     {
         bal=bal-amt;
-        cout<<bal;
+        cout<<bal+mbal;
     }
 }
 void bank::deposit()
@@ -40,7 +40,7 @@ void bank::deposit()
     cout<<"enter the amount to be deposited";
     cin>>amt;
     bal=bal+amt;
-    cout<<bal;
+    cout<<bal+mbal;
 }
 
 int main()
